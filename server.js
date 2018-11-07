@@ -43,6 +43,8 @@ app.get('/offline_api', function(req, res) {
 app.listen(process.env.PORT, function () {
   console.log(`Example app listening on port ${process.env.PORT}!`);
   if (process.env.NODE_ENV === 'development') {
-    require('open')(`http://localhost:${process.env.PORT}`);
+    // commented out so it doesn't start default browser
+    // prefer to open Chrome in incognito mode
+    // require('open')(`http://localhost:${process.env.PORT}`);
   }
 });
